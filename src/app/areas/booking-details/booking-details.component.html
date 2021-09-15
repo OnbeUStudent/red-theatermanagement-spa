@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Booking Details</h1>
+
+    <div class="details">
+        <label><b>Movie title:</b></label>
+        <p>{{getBooking?.movie?.title}}</p>
+        <label><b>Movie year:</b></label>
+        <p>{{getBooking?.movie?.movieMetadata?.year}}</p>
+
+        <label class="back" (click)="goBack()">Back to bookings list</label>
+    </div>
+</div>
+
+

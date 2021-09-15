@@ -1,0 +1,43 @@
+{
+  "consumer": {
+    "name": "red-theatermanagement-spa"
+  },
+  "provider": {
+    "name": "red-theatermanagement-bff"
+  },
+  "interactions": [
+    {
+      "description": "A GET request to retrieve the movies",
+      "providerState": "There are SOME movies",
+      "request": {
+        "method": "GET",
+        "path": "/api/movies"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "movieId": 1,
+            "title": "example-title"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "min": 1
+          },
+          "$.body[*].*": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

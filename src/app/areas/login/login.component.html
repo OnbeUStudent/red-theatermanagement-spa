@@ -1,0 +1,25 @@
+<div class="container fake-users-container">
+    <h1>You may log in as any of the users listed below.</h1>
+    <p>This is a simplified login system for demo purposes. In a non-demo app you'd have been redirected to the auth server.</p>
+    <div class="fake-users-table">
+        <div class="fake-users-header">
+            <div class="col-1">Sub</div>
+            <div class="col-2">Username</div>
+            <div class="col-3">Email</div>
+            <div class="col-4">Name</div>
+            <div class="col-5">IsSynthetic</div>
+            <div class="col-6">Theater Code</div>
+            <div class="col-7"></div>
+        </div>
+
+        <div *ngFor="let fakeUser of getFakeUsers; index as i;" class="fake-user-row">
+            <div class="col-1">{{fakeUser.sub}}</div>
+            <div class="col-2">{{fakeUser.userName}}</div>
+            <div class="col-3">{{fakeUser.email}}</div>
+            <div class="col-4">{{fakeUser.name}}</div>
+            <div class="col-5">{{fakeUser.isSynthetic}}</div>
+            <div class="col-6">{{fakeUser.theaterCode}}</div>
+            <div class="col-7"><button (click)="onLogin(fakeUser)">Login</button></div>
+        </div>
+    </div>
+</div>

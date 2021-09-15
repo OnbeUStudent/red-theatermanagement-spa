@@ -1,0 +1,29 @@
+<div class="container bookings-container">
+    <h1>Current Bookings</h1>
+    <div class="bookings-table">
+        <div class="bookings-header">
+            <div class="col-1">Month</div>
+            <div class="col-2">Movie</div>
+            <div class="col-3"></div>
+        </div>
+
+        <div *ngFor="let date of getAllDates; index as i;" class="bookings-row">
+            <div class="col-1">{{date.month + "/" + date.year}}</div>
+            <div class="col-2" *ngIf="getBookingsByMonth[toNumber(date.year + date.month)]; else elseBlock">{{getBookingsByMonth[toNumber(date.year + date.month)].movie.title}}</div>
+            <ng-template #elseBlock><div class="col-2" ></div>
+            </ng-template>
+            <div class="col-3" *ngIf="getBookingsByMonth[toNumber(date.year + date.month)]; else elseBlock2">
+                <label (click)="handleEditClick(date.year + date.month)" class="action-label action-label-left">Edit Booking</label>
+                <label (click)="showBookingDetails(date.year + date.month)" class="action-label action-label-left action-label-right">Booking Details</label>
+                <label (click)="handleDeleteClick(date.year + date.month)" class="action-label action-label-right">Delete Booking</label>
+            </div>
+            <ng-template #elseBlock2><div class="col-3" >
+                <label (click)="handleCreateClick(date.year + date.month)" class="action-label">Book a Movie</label>
+            </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+
+<app-delete-modal #deleteModal (onDelete)="deleteBooking()"></app-delete-modal>
+<app-create-edit-modal #createEditModal [action]="getAction" (onSave)="saveBooking($event)"></app-create-edit-modal>

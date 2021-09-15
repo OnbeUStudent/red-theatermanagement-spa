@@ -1,0 +1,5 @@
+<div>
+<select name="movies" id="movies" (change)="handleMovieSelected()">
+    <option *ngFor="let movie of getMovies; index as i;" value="{{movie.movieId}}">{{movie.title}}</option>
+</select>
+</div>

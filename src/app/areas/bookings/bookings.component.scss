@@ -1,0 +1,60 @@
+.bookings-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookings-table {
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+
+.bookings-header {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bookings-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.action-label {
+    cursor: pointer;
+}
+
+.action-label:hover {
+    color: #7b8a8b;
+}
+
+.action-label-left {
+    padding-right: 10px;
+    border-right: 1px solid gray;
+}
+
+.action-label-right {
+    padding-left: 10px;
+    border-left: 1px solid gray;
+}
+
+.col-1 {
+    width: 10%;
+    padding-right: 20px;
+}
+
+.col-2 {
+    width: 40%;
+    padding-right: 20px;
+}
+
+.col-3 {
+    width: 40%;
+    padding-right: 20px;
+}

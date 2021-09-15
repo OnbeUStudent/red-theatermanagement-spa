@@ -1,0 +1,62 @@
+.fake-users-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.fake-users-table {
+    margin-top: 40px;
+}
+
+.fake-users-header {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fake-user-row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.col-1 {
+    width: 25%;
+    padding-right: 20px;
+}
+
+.col-2 {
+    width: 15%;
+    padding-right: 20px;
+}
+
+.col-3 {
+    width: 20%;
+    padding-right: 20px;
+}
+
+.col-4 {
+    width: 10%;
+    padding-right: 20px;
+}
+
+.col-5 {
+    width: 10%;
+    padding-right: 20px;
+}
+
+.col-6 {
+    width: 10%;
+    padding-right: 20px;
+}
+
+.col-7 {
+    width: 10%;
+    padding-right: 20px;
+}

@@ -1,0 +1,23 @@
+<header>
+  <nav class="navbar navbar-expand navbar-dark bg-primary border-bottom box-shadow mb-3">
+    <a class="navbar-brand" *ngIf="isLoggedIn" routerLink="/">{{currentUser.theaterCode}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a *ngIf="isLoggedIn" class="nav-user text-light bg-primary">
+          Signed in as {{currentUser.name}}
+        </a>
+        <a *ngIf="!isLoggedIn" class="nav-link text-light bg-primary" title="Log in" routerLink="/login">Log in</a>
+        <a *ngIf="isLoggedIn" class="nav-link text-light bg-primary"  title="Logout" (click)="onLogout()">Log Out</a>
+      </div>
+      <div class="navbar-nav flex-grow-1">
+        <a class="nav-link text-light bg-primary" routerLink="/movies">Movies</a>
+        <a class="nav-link text-light bg-primary" *ngIf="isLoggedIn" routerLink="/bookings">Bookings</a>
+        <a class="nav-link text-light bg-primary" routerLink="/about">About</a>
+      </div>
+    </div>
+  </nav>
+</header>
