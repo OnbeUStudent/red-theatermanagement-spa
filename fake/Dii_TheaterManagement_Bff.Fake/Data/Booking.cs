@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+using System;
+using System.Text.Json.Serialization;
 // test
 namespace FakeTheaterBff.Data
 {
@@ -9,14 +10,14 @@ namespace FakeTheaterBff.Data
         {
 
         }
-        public Booking(string theaterCode, int monthId, long movieId)
+        public Booking(string theaterCode, int monthId, Guid movieId)
         {
             TheaterCode = theaterCode;
             MonthId = monthId;
             MovieId = movieId;
         }
 
-        public long MovieId { get; set; }
+        public Guid MovieId { get; set; }
         public Movie Movie { get; set; }
 
         /// <summary>
