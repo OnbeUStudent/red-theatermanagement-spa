@@ -1,11 +1,11 @@
 import { MovieMetadata } from "./MovieMetadata";
 
 export class Movie {
-  public movieId!: string;
+  public movieId!: number;
   public title!: string;
   public movieMetadata: MovieMetadata | undefined;
 
-  constructor(movieId: string, title: string){
+  constructor(movieId: number, title: string){
     this.movieId = movieId;
     this.title = title;
   }

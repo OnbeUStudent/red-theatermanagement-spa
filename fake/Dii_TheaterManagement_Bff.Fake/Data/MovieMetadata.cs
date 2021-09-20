@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -19,7 +19,7 @@ namespace FakeTheaterBff.Data
     public partial class MovieMetadata
     {
         [JsonIgnore]
-        public Guid MovieMetadataId { get; set; }
+        public long MovieMetadataId { get; set; }
 
         [JsonProperty("Title")]
         [Required]

@@ -20,7 +20,7 @@
         },
         "body": [
           {
-            "movieId": "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF",
+            "movieId": 1,
             "title": "example-title"
           }
         ],

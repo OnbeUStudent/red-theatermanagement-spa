@@ -1,12 +1,11 @@
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace FakeTheaterBff.Data
 {
     public class Movie
     {
-        public Guid MovieId { get; set; }
+        public long MovieId { get; set; }
 
         public virtual ICollection<Booking> Bookings { get; set; }
 
