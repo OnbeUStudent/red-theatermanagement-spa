@@ -1,3 +1,5 @@
+import { FakeUser } from './../../core/singleton-services/auth/FakeUser';
+import { FeatureFlagsService } from './../../core/singleton-services/feature-flags/feature-flags.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/singleton-services/auth/auth.service';
@@ -39,7 +41,7 @@ export class BookingsComponent implements OnInit {
   @ViewChild('deleteModal') deleteModal: DeleteModalComponent | undefined;
   @ViewChild('createEditModal') createEditModal: CreateEditModalComponent | undefined;
 
-  constructor(private bookingsService: BookingsService, private authService: AuthService, public router: Router) {
+  constructor(public featureFlagsService: FeatureFlagsService, private bookingsService: BookingsService, private authService: AuthService, public router: Router) {
     this.bookingsByMonth = {};
     this.selectedteMonthId = "0";
     this.action = "Create";

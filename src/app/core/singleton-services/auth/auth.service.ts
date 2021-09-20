@@ -29,7 +29,7 @@ export class AuthService {
     return localStorage.getItem('access_token');
   }
 
-  get currentUser() {
+  get currentUser() : FakeUser {
     let currentUser = localStorage.getItem('current_user');
     return currentUser && JSON.parse(currentUser);
   }
