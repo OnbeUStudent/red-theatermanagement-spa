@@ -16,7 +16,7 @@ export class MoviesListComponent implements OnInit {
   constructor(
     private moviesCacheService: MoviesCacheService
   ) {
-    
+
    }
 
   ngOnInit(): void {
@@ -36,7 +36,7 @@ export class MoviesListComponent implements OnInit {
   }
 
   handleMovieSelected() {
-    const selectedMovieId = Number((<HTMLInputElement>document.getElementById("movies")).value);
+    const selectedMovieId: string = (<HTMLInputElement>document.getElementById("movies")).value;
     this.selectedMovie = this.movies?.find((movie) => movie.movieId === selectedMovieId);
     this.onMovieSelected.emit(this.selectedMovie);
   }

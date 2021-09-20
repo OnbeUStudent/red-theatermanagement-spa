@@ -58,7 +58,7 @@ describe('BackendService consumer-defined contracts', () => {
               headers: {
                 "Content-Type": "application/json; charset=utf-8",
               },
-              body: eachLike(new Movie(1, "example-title")),
+              body: eachLike(new Movie("FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF", "example-title")),
             },
           }
         )
